@@ -1,3 +1,4 @@
+import { css } from "@emotion/css";
 import React, { useState } from "react";
 
 interface CalProps {}
@@ -6,7 +7,12 @@ export default function Cal({}: CalProps) {
   const [a, setA] = useState(0);
   const [b, setB] = useState(0);
   return (
-    <div>
+    <div
+      className={css`
+        background: yellow;
+        height: 200px;
+      `}
+    >
       <input
         type="number"
         value={a}
